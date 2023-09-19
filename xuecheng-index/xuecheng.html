@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>我的第一个 HTML 页面</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .w {
+            width: 1200px;
+            margin: auto;
+        }
+
+        .a {
+            background-color: rgb(193, 206, 206);
+            text-align: center;
+        }
+
+        .header {
+            height: 42px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            vertical-align: middle
+                /* background-color: antiquewhite; */
+
+        }
+
+        .tabs {
+            position: relative;
+            float: left;
+            vertical-align: middle;
+            /* margin-top: 11px; */
+            /* height: 20px; */
+        }
+
+        .tabs li {
+            float: left;
+            list-style: none;
+
+            padding-left: 20px;
+            padding-right: 20px;
+            vertical-align: middle;
+            line-height: 42px;
+            /* font-size: 16px; */
+        }
+
+        .tabs li a {
+            text-decoration: none;
+            color: black;
+
+        }
+
+        .tabs li a:hover {
+            text-decoration: underline;
+            color: blue;
+
+        }
+
+        .logo {
+            /* margin-left: 50px; */
+            margin-right: 70px;
+            float: left;
+        }
+
+        .search {
+            float: left;
+            height: 40px;
+            width: 345px;
+            padding-left: 15px;
+            /* margin-top: 11px; */
+            margin-left: 60px;
+
+            border-radius: 0px;
+            /* border: 2px; */
+            /* line-height: 232px; */
+            border: 1px solid;
+            border-color: rgb(0, 164, 255);
+        }
+
+        .search-button {
+            float: left;
+            height: 42px;
+            /* margin-top: 11px; */
+            width: 40px;
+            background-color: rgb(0, 164, 255);
+            background-image: url(./imgs/fa-search.png);
+            background-repeat: no-repeat;
+            background-position: center center;
+            border: 0px;
+
+        }
+
+        .user-icon {
+            float: left;
+            margin-left: 80px;
+            height: 42px;
+        }
+
+        .user-name {
+            float: left;
+            /* margin-top: 13px; */
+            height: 42px;
+            line-height: 42px;
+            /* margin-left: 80px; */
+            color: gray;
+            font-size: 10px;
+            margin-left: 2px;
+
+        }
+
+        .banner {
+            width: 1000px;
+            margin: 10px auto;
+            height: 300px;
+            background-color: aqua;
+        }
+
+        .sep {
+            float: left;
+            height: 425px;
+            width: 240px;
+            background-color: lawngreen;
+        }
+
+        .guanggao {
+            float: left;
+            height: 425px;
+            width: 760px;
+            background-color: palevioletred;
+        }
+
+        .item-class {
+            height: 425px;
+        }
+
+        .item-class li a {
+            text-decoration: none;
+            color: rgb(13, 135, 105);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="w header">
+        <a href="#"><img class="logo" src="./imgs/logo_03.png"></a>
+        <ul class="tabs">
+            <li><a href="#">首页</a></li>
+            <li><a href="#">课程</a></li>
+            <li><a href="#">职业规划</a></li>
+        </ul>
+        <input class="search">
+        <input class="search-button" type="button">
+        <img class="user-icon" src="./imgs/use.png">
+        <span class="user-name">王子杰</span>
+    </div>
+    <div class="banner">
+        <div class="sep">
+            <ul class="item-class">
+                <li><a>前端开发</a>前端开发</li>
+                <li><a>后端开发</a></li>
+                <li><a>移动开发</a></li>
+                <li><a>人工智能</a></li>
+                <li><a>商业预测</a></li>
+                <li><a>云计算&大数据</a></li>
+                <li><a>运维&测试</a></li>
+                <li><a>UI设计</a></li>
+                <li><a>产品</a></li>
+            </ul>
+
+        </div>
+        <div class="guanggao"></div>
+    </div>
+</body>
+
+</html>
