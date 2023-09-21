@@ -106,39 +106,196 @@
             line-height: 42px;
             /* margin-left: 80px; */
             color: gray;
-            font-size: 10px;
+            font-size: 18px;
             margin-left: 2px;
 
         }
 
-        .banner {
-            width: 1000px;
-            margin: 10px auto;
+        .bg-banner {
+            width: 100%;
             height: 300px;
-            background-color: aqua;
+            background-color: rgb(28, 3, 108);
+        }
+
+        .banner {
+            width: 100%;
+            margin: 10px auto;
+            height: 420px;
+            background-color: rgb(28, 3, 108);
         }
 
         .sep {
             float: left;
-            height: 425px;
-            width: 240px;
-            background-color: lawngreen;
+            height: 420px;
+            width: 230px;
+            margin-left: 19%;
+            background-color: rgba(20, 2, 74, 0.5);
+            z-index: 2;
+            position: relative;
+        }
+
+
+
+        .item-class {
+            height: 100%;
+            /* box-sizing: border-box; */
+            list-style: none;
+            /* border-top: solid #5B6DCD 10px; */
+            margin-left: 10%;
+            /* margin-top: 10%; */
+        }
+
+        .item-class li {
+            color: black;
+            height: 20px;
+            margin-top: 24px;
+            margin-bottom: 0px;
+            /* text-align: center; */
+            align-items: center;
+            width: 200px;
+            position: relative;
+        }
+
+
+        .item-class li a {
+            line-height: 20px;
+            height: 20px;
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+            font-size: 15px;
+            font-family: Microsoft YaHei;
+
+        }
+
+        .item-class li a:hover {
+            color: rgb(2, 164, 236);
+        }
+
+        .ss {
+            /* display: inline-block; */
+            line-height: 20px;
+            height: 9px;
+            width: 5px;
+
+            /* margin-top: 5.5px; */
+            vertical-align: middle;
+            /* margin-bottom: 5.5px; */
+            position: absolute;
+            right: 10px;
+            top: 5.5px;
         }
 
         .guanggao {
             float: left;
             height: 425px;
-            width: 760px;
-            background-color: palevioletred;
+            width: 970px;
+            position: relative;
         }
 
-        .item-class {
-            height: 425px;
+        .pll {
+            position: absolute;
+            left: -200px;
+
         }
 
-        .item-class li a {
+        .guanggao::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        .huadong {
+            position: absolute;
+            width: 150px;
+            height: 20px;
+            bottom: 15px;
+            left: 35%;
+            text-align: center;
+        }
+        .cli {
+            float:left;
+            width: 10px;
+            height: 10px;
+            background-color: rgba(255, 255, 255,0.7);
+            border-radius: 50%;
+            margin: 0 10px;
+            margin-top: 5px;
+        }
+        .class-table {
+            
+            position: absolute;
+            z-index: 10;
+            width: 230px;
+            height: 300px;
+            background-color: white;
+            left: 80%;
+            top: 50px;
+        }
+
+        .table-name {
+            height: 50px;
+            width: 100%;
+            background-color: rgb(155, 206, 234);
+            font-weight: 600;
+            color: white;
+            text-align: center;
+            line-height: 50px;
+            letter-spacing: 2px;
+            position: relative;
+            margin-bottom: 5px;
+            
+        }
+        .class-detail {
+            display: inline-block;
+            width: 190px;
+            height: 60px;
+            margin: 0px 20px;
             text-decoration: none;
-            color: rgb(13, 135, 105);
+        }
+        .class-detail1 {
+            border-bottom: 1px solid rgb(234, 234, 234);
+            
+            
+        }
+        .coco {
+            margin-top: 12px;
+
+
+        }
+        .connn, .connn-l1{
+            display: inline-block;
+            color: rgb(125, 125, 125);
+            letter-spacing: 2px;
+        }
+        .connn {
+            font-size: 16px;
+            
+        }
+        .connn-l1 {
+            font-size: 13px;
+            
+        }
+        .studing {
+            color: rgb(165, 165, 165);
+            margin-top: 2px;
+        }
+        .ssddd {
+            margin-bottom: 2px;
+        }
+        .ssddd:hover {
+            color: rgb(38, 171, 255);
+        }
+
+        #all-class {
+            display: inline-block;
+            width: 200px;
+            height: 40px;
+            border: 1px solid rgb(38, 171, 255);
+            margin: 5px 15px;
+            line-height: 40px;
+            text-align: center;
+            color: rgb(38, 171, 255);
+            font-weight: 900;
+            text-decoration: none;
         }
     </style>
 </head>
@@ -155,25 +312,63 @@
         <input class="search">
         <input class="search-button" type="button">
         <img class="user-icon" src="./imgs/use.png">
-        <span class="user-name">王子杰</span>
+        <span class="user-name">sam</span>
     </div>
     <div class="banner">
         <div class="sep">
             <ul class="item-class">
-                <li><a>前端开发</a>前端开发</li>
-                <li><a>后端开发</a></li>
-                <li><a>移动开发</a></li>
-                <li><a>人工智能</a></li>
-                <li><a>商业预测</a></li>
-                <li><a>云计算&大数据</a></li>
-                <li><a>运维&测试</a></li>
-                <li><a>UI设计</a></li>
-                <li><a>产品</a></li>
+                <li><a href="#">前端开发</a><img class="ss" src="./imgs/ss.png"></li>
+                <li><a href="#">后端开发</a><img class="ss" src="./imgs/ss.png"></li>
+                <li><a href="#">移动开发</a><img class="ss" src="./imgs/ss.png"></li>
+                <li><a href="#">人工智能</a><img class="ss" src="./imgs/ss.png"></li>
+                <li><a href="#">商业预测</a><img class="ss" src="./imgs/ss.png"></li>
+                <li><a href="#">云计算&大数据</a><img class="ss" src="./imgs/ss.png"></li>
+                <li><a href="#">运维&测试</a><img class="ss" src="./imgs/ss.png"></li>
+                <li><a href="#">UI设计</a><img class="ss" src="./imgs/ss.png"></li>
+                <li><a href="#">产品</a><img class="ss" src="./imgs/ss.png"></li>
             </ul>
 
         </div>
-        <div class="guanggao"></div>
+        <div class="guanggao">
+            <img class="pll" src="./imgs/banner2.png">
+            <div class="huadong">
+                <span class="cli"></span>
+                <span class="cli"></span>
+                <span class="cli"></span>
+                <span class="cli"></span>
+                <span class="cli"></span>
+            </div>
+            <div class="class-table">
+                <div class="table-name">我的课程表</div>
+                <a href="#" class="class-detail class-detail1">
+                    <div class="coco">
+                        <h3 class="connn">继续学习</h3>
+                        <span class="connn-l1">程序语言设计</span>
+                    </div>
+                    
+                    <h6 class="studing">正在学习-使用对象</h6>
+                </a>
+                <a href="#" class="class-detail class-detail1">
+                    <div class="coco">
+                        <h3 class="connn">继续学习</h3>
+                        <span class="connn-l1">程序语言设计</span>
+                    </div>
+                    
+                    <h6 class="studing">正在学习-使用对象</h6>
+                </a>
+                <a href="#" class="class-detail ssddd">
+                    <div class="coco">
+                        <h3 class="connn">继续学习</h3>
+                        <span class="connn-l1">程序语言设计</span>
+                    </div>
+                    
+                    <h6 class="studing">正在学习-使用对象</h6>
+                </a>
+                <a href="#" id="all-class">全部课程</a>
+            </div>
+        </div>
     </div>
+
 </body>
 
 </html>
