@@ -3,6 +3,9 @@
     padding: 0px;
 }
 
+body {
+    background-color: rgb(243,245,247);
+}
 .w {
     width: 1200px;
     margin: auto;
