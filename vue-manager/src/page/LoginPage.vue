@@ -1,19 +1,25 @@
 <template>
   <div class="login_page fill_contain">
-    <h3>管理后台</h3>
+    <section class="sex">
+    <div class="manage_tip">
+      <h3>管理后台</h3>
+    </div>
+
     <el-form :model="ruleForm" status-icon :rules="rules" ref="ruleForm" label-width="100px" class="demo-ruleForm">
-      <el-form-item prop="username">
+      <el-form-item label-width="20px"  prop="username" >
         <el-input class="input-text usename" type="text" v-model="ruleForm.username" placeholder="用户名"
           autocomplete="off"></el-input>
       </el-form-item>
-      <el-form-item prop="pass">
+      <el-form-item label-width="20px" prop="pass">
         <el-input class="input-text" type="password" v-model="ruleForm.pass" placeholder="密码"
           autocomplete="off"></el-input>
       </el-form-item>
-      <el-form-item>
+      <el-form-item label-width="20px">
         <el-button class="denglu" type="primary" @click="submitForm('ruleForm')">登录</el-button>
       </el-form-item>
     </el-form>
+    </section>
+
   </div>
 </template>
 
@@ -78,9 +84,10 @@ export default {
   .demo-ruleForm {
     // display: inline-block;
     width: 360px;
-    height: 200px;
+    height: 230px;
     background-color: white;
 
+    margin: 10px auto;
     // padding-top: 30px;
     // padding-right: 30px;
     .usename {
@@ -99,4 +106,11 @@ export default {
     }
   }
 }
+
+.manage_tip {
+  width: 360px;
+  // margin: auto ;
+  // padding-top: 150px;
+}
+
 </style>

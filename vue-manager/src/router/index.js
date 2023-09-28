@@ -2,6 +2,7 @@ import Router from 'vue-router'
 import Vue from 'vue'
 
 import LoginPage from '@/page/LoginPage.vue'
+import ManagePage from '@/page/ManagePage.vue'
 
 Vue.use(Router)
 
@@ -10,7 +11,16 @@ Vue.use(Router)
 export const constantRoutes = [
     {
         path: '/login',
-        component: LoginPage
+        component: LoginPage,
+        name: 'login'
+    },
+    {
+        path: '/manage',
+        component: ManagePage
+    },
+    {
+        path: '*',
+        redirect: 'login',
     }
 ]
 const createRouter = () => new Router({

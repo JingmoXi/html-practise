@@ -1,6 +1,6 @@
 <template>
   <div>
-    管理页面
+    左侧功能列表
   </div>
 </template>
 
