@@ -1,21 +1,24 @@
 <template>
   <div class="login_page fill_contain">
+    <h3>管理后台</h3>
     <el-form :model="ruleForm" status-icon :rules="rules" ref="ruleForm" label-width="100px" class="demo-ruleForm">
-      <el-form-item label="用户名" prop="username">
-        <el-input type="password" v-model="ruleForm.username" autocomplete="off"></el-input>
+      <el-form-item prop="username">
+        <el-input class="input-text usename" type="text" v-model="ruleForm.username" placeholder="用户名"
+          autocomplete="off"></el-input>
       </el-form-item>
-      <el-form-item label="密码" prop="pass">
-        <el-input type="password" v-model="ruleForm.pass" autocomplete="off"></el-input>
+      <el-form-item prop="pass">
+        <el-input class="input-text" type="password" v-model="ruleForm.pass" placeholder="密码"
+          autocomplete="off"></el-input>
       </el-form-item>
       <el-form-item>
-        <el-button type="primary" @click="submitForm('ruleForm')">登录</el-button>
+        <el-button class="denglu" type="primary" @click="submitForm('ruleForm')">登录</el-button>
       </el-form-item>
     </el-form>
-    <span>{{ msg }}</span>
   </div>
 </template>
 
 <script>
+import { login } from '@/api/getData.js'
 export default {
   name: 'LoginPage',
   data() {
@@ -32,24 +35,68 @@ export default {
           { required: true, message: '请输入密码', trigger: 'blur' }
         ],
       },
-      msg: "欢迎"
+
 
     }
   },
   methods: {
-    submitForm(formName) {
+    async submitForm(formName) {
       console.debug(formName)
+      const res = await login(this.$data.ruleForm)
+      if (res.status == 1) {
+
+        this.$router.push('manage')
+      } else {
+        this.$router.push('manage')
+      }
 
     }
   }
 };
 </script>
 
-<style scope>
+<style scope lang="less">
+@import '../style/min.less';
+
 .login_page {
   background-color: #324057;
   height: 100%;
   width: 100%;
-   
+  display: flex;
+  justify-content: center;
+  /* 水平居中 */
+  align-items: center;
+
+  /* 垂直居中 */
+  h3 {
+    color: white;
+    //在某些场景下,什么
+    // display: block;
+
+  }
+
+  .demo-ruleForm {
+    // display: inline-block;
+    width: 360px;
+    height: 200px;
+    background-color: white;
+
+    // padding-top: 30px;
+    // padding-right: 30px;
+    .usename {
+      margin-top: 30px;
+    }
+
+    .input-text {
+      width: 300px;
+      // margin-left: 30px;
+      margin-bottom: 5px;
+    }
+
+    .denglu {
+      width: 300px;
+      // margin-left: 30px;
+    }
+  }
 }
 </style>
