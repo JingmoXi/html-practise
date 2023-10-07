@@ -3,7 +3,7 @@ import Vue from 'vue'
 
 import LoginPage from '@/page/LoginPage.vue'
 import ManagePage from '@/page/ManagePage.vue'
-import FirstPage from '@/page/FirstPage.vue'
+import UserList from '@/page/UserList.vue'
 
 Vue.use(Router)
 
@@ -21,7 +21,7 @@ export const constantRoutes = [
         children: [
             {
                 path: '/userList',
-                component: FirstPage,
+                component: UserList,
                 meta: ['数据管理', '用户列表'],
             }
         ]

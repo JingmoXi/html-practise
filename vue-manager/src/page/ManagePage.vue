@@ -5,16 +5,39 @@
         <!-- 左侧菜单 -->
         <el-menu :default-openeds="['1', '3']" active-text-color="#20a0ff" text-color="#bfcbd9"
           background-color="#324157" router>
-          <el-menu-item index="1" route="FirstPage"  @click="menuChange(1)"><i class="el-icon-message"></i>首页</el-menu-item>
+          <el-menu-item index="1" route="firstPage"  @click="menuChange(1)"><i class="el-icon-message"></i>首页</el-menu-item>
           <el-submenu index="2">
-            <template slot="title"><i class="el-icon-message"></i>导航二</template>
-            <el-menu-item index="2-1" style="color: #bfcbd9;">选项1</el-menu-item>
-            <el-menu-item index="2-2" style="color: #bfcbd9;">选项2</el-menu-item>
+            <template slot="title"><i class="el-icon-message"></i>数据管理</template>
+            <el-menu-item index="2-1" style="color: #bfcbd9;">用户列表</el-menu-item>
+            <el-menu-item index="2-2" style="color: #bfcbd9;" route="userList">商家列表</el-menu-item>
             <el-menu-item index="2-3" style="color: #bfcbd9;">选项3</el-menu-item>
           </el-submenu>
+          <el-submenu index="3">
+            <template slot="title"><i class="el-icon-message"></i>添加数据</template>
+            <el-menu-item index="3-1" style="color: #bfcbd9;">添加商铺</el-menu-item>
+            <el-menu-item index="3-2" style="color: #bfcbd9;">添加商品</el-menu-item>
+            
+          </el-submenu>
+          <el-submenu index="4">
+            <template slot="title"><i class="el-icon-message"></i>图标</template>
+            <el-menu-item index="4-1" style="color: #bfcbd9;">用户分布</el-menu-item> 
+          </el-submenu>
+          <el-submenu index="5">
+            <template slot="title"><i class="el-icon-message"></i>编辑</template>
+            <el-menu-item index="5-1" style="color: #bfcbd9;">文本编辑</el-menu-item> 
+          </el-submenu>
+
+          <el-submenu index="6">
+            <template slot="title"><i class="el-icon-message"></i>设置</template>
+            <el-menu-item index="6-1" style="color: #bfcbd9;">管理员设置</el-menu-item> 
+          </el-submenu>
+          <el-submenu index="6">
+            <template slot="title"><i class="el-icon-message"></i>说明</template>
+            <el-menu-item index="6-1" style="color: #bfcbd9;">说明</el-menu-item> 
+          </el-submenu>
+
         </el-menu>
 
-        <PageHead></PageHead>
       </el-aside>
 
       <el-container>
@@ -51,7 +74,7 @@
 
 <script>
 
-import PageHead from '@/components/PageHead.vue'
+// import PageHead from '@/components/PageHead.vue'
 
 export default {
   data() {
@@ -75,7 +98,7 @@ export default {
     }
   },
   components:{
-    PageHead
+    // PageHead
   }
 }
 </script>
