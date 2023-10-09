@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,inline-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/jd.css">
+    <title>JD</title>
+
+    <style>
+        div {
+            display: inline-block;
+            width: 100px;
+            height: 150px;
+            background-color: antiquewhite;
+            /* transform: rotate(90deg); */
+        }
+
+    </style>
+
+</head>
+
+<body>
+<div>
+    
+   <select multiple="multiple">
+    <option>这些</option>
+    <option>目前</option>
+    <option>什么</option>
+   </select>
+   <input type="text">
+   <ul>
+    <li class="l">请选择</li>
+    <li class="l"><input type="checkbox" >1</li>
+    <li class="l"><input type="checkbox" >2</li>
+    <li class="l"><input type="checkbox" >3</li>
+   </ul>
+</div>
+</body>
+<script src="./code.jquery.com_jquery-3.7.0.min.js"></script>
+<script>
+  $("option").css("color","red")
+</script>
+</html>

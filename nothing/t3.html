@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,inline-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JD</title>
+
+    <style>
+        h1 {
+            display: inline-block;
+            /* transform: translateX(1000px) ; */
+            transition: all 3s;
+            /* margin-left: 10%; */
+            animation: colorChange 5s infinite;
+        }
+
+        audio {
+            visibility: hidden;
+        }
+
+        @keyframes colorChange {
+            0% {
+                background-color: red;
+            }
+
+            50% {
+                background-color: blue;
+            }
+
+            100% {
+                background-color: green;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <div>
+        <h1>这是标题</h1>
+    </div>
+    <input type="button">
+    <audio id="myAudio" controls>
+        <source src="./sample-3s.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+</body>
+<script src="./code.jquery.com_jquery-3.7.0.min.js"></script>
+<script>
+    var audio = $("#myAudio")[0];
+    $("input").on("click", function () {
+        audio.play();
+    });
+    var screenWidth = $(window).width();
+    var hwi = $("h1").width();
+    // alert("屏幕宽度是: " + screenWidth + " 像素");
+
+
+    // });
+    const sleep = (delay) => new Promise((resolve) => setTimeout(resolve, delay))
+    const repeatedGreetings = async () => {
+        var i = 0;
+        while (true) {
+            // text += "The number is " + i;
+            i++;
+            await sleep(3000);
+            var s = i % 2;
+            if (s == 0) {
+                $("h1").css("transform", "translateX(" + (screenWidth - hwi) + "px)")
+            } else {
+                $("h1").css("transform", "translateX(" + 0 + "px)")
+            }
+
+        }
+        // await sleep(1000)
+        // console.log("First")
+        // await sleep(1000)
+        // console.log("Second")
+        // await sleep(1000)
+        // console.log("Third")
+    }
+    repeatedGreetings();
+</script>
+
+</html>
