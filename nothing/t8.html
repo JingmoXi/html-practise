@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,inline-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>JD</title>
+
+  <style>
+    /* body {
+      display: flex;
+    } */
+    .col1 {
+      display: grid;
+      grid-template-columns: repeat(3, 100px);
+      /* 创建3列的网格 */
+      grid-template-rows: repeat(3, 100px);
+      /* 创建3行的网格，每行高度为100px */
+      /* gap: 10px; */
+      /* 项目之间的间隙 */
+      width: 300px;
+      /* 设置网格容器的宽度 */
+      margin: 0 auto;
+      /* 水平居中 */
+    }
+
+    .row1 {
+      /* height: 150px; */
+      /* width: 150px; */
+      background-color: aqua;
+      border: 1px solid black;
+    }
+
+  </style>
+
+</head>
+
+<body>
+  <div class="col1">
+    <div class="row1">测试投影1</div>
+    <div class="row1">测试投影1</div>
+    <div class="row1">测试投影1</div>
+    <div class="row1">测试投影2</div>
+    <div class="row1">测试投影2</div>
+    <div class="row1">测试投影2</div>
+    <div class="row1">测试投影2</div>
+    <div class="row1">测试投影2</div>
+    <div class="row1">测试投影2</div>
+  </div>
+
+</body>
+<script src="./code.jquery.com_jquery-3.7.0.min.js"></script>
+<script>
+  $("input").css("color", "red")
+
+</script>
+
+</html>

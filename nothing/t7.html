@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,inline-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>JD</title>
+
+  <style>
+    /* body {
+      display: flex;
+    } */
+    div {
+      display: flex;
+      
+    }
+    .row1 {
+      width: 150px;
+      height: 150px;
+      background-color: aquamarine;
+      border: 1px solid black;
+      flex-grow: 1;
+    }
+    .row2 {
+      width: 150px;
+      height: 150px;
+      background-color: aquamarine;
+      border: 1px solid black;
+    }
+    .row3 {
+      width: 150px;
+      height: 150px;
+      background-color: aquamarine;
+      border: 1px solid black;
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="col1">
+    <div class="row1">测试投影1</div>
+    <div class="row1">测试投影1</div>
+    <div class="row1">测试投影1</div>
+  </div>
+  <div class="col2">
+    <div class="row2">测试投影2</div>
+    <div class="row2">测试投影2</div>
+    <div class="row2">测试投影2</div>
+  </div>
+  <div class="col3">
+    <div class="row3">测试投影3</div>
+    <div class="row3">测试投影3</div>
+    <div class="row3">测试投影3</div>
+  </div>
+</body>
+<script src="./code.jquery.com_jquery-3.7.0.min.js"></script>
+<script>
+  $("input").css("color", "red")
+
+</script>
+
+</html>
