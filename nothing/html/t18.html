@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>JD</title>
+
+  <style>
+    .ratio {
+      background-color: salmon;
+      position: relative;
+    }
+
+    .ratio::before {
+      content: '';
+      display: block;
+      padding-top: calc(1 / var(--ratio) * 100%);
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="ratio" style="--ratio: 0.5;"></div>
+
+  <!-- 宽度始终是高度的一半 -->
+
+</body>
+<script src="./code.jquery.com_jquery-3.7.0.min.js"></script>
+<script>
+
+</script>
+
+</html>
