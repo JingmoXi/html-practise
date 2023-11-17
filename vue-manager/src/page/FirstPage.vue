@@ -62,6 +62,7 @@ h1 {
   margin: auto 20px;
   border-radius: 8px;
   line-height: 40px;
+  border-left: 20%;
 }
 
 .title1 {
