@@ -11,7 +11,7 @@
       <el-table-column property="area" label="地址">
       </el-table-column>
     </el-table>
-    <el-pagination ref="paginationNum" background layout="prev, pager, next" :page-sizes="[10, 20, 30]" :total="totalCount">
+    <el-pagination ref="paginationNum"  @current-change="handleCurrentChange" background layout="prev, pager, next" :page-size="pagesize" :page-sizes="pagesizes" :current-page="currentPage" :total="totalCount">
     </el-pagination>
   </div>
 </template>
@@ -23,7 +23,10 @@ export default {
     return {
       tableData: null,
       currentRow: null,
-      totalCount: 10
+      totalCount: 10,
+      currentPage: 1,
+      pagesizes: [10, 20, 30],
+      pagesize: 20
     }
   },
 
@@ -31,8 +34,10 @@ export default {
     setCurrent(row) {
       this.$refs.singleTable.setCurrentRow(row);
     },
-    handleCurrentChange(val) {
-      this.currentRow = val;
+    handleCurrentChange(e) {
+      console.log(e)
+      this.currentRow = e;
+      this.queryData(e,this.$data.pagesize)
     },
     queryData(page,pageSize) {
       var res = userList({ "page": page,"pageSize": pageSize })
@@ -48,7 +53,7 @@ export default {
   },
   created() {
       console.log(123)
-      this.queryData(1,10)
+      this.queryData(this.$data.currentPage,this.$data.pagesize)
     }
 }
 </script>
