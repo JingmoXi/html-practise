@@ -3,7 +3,7 @@
     <el-container style="height: 100%; border: 1px solid #eee">
       <el-aside width="200px" style="background-color: rgb(50, 64, 87)">
         <!-- 左侧菜单 -->
-        <el-menu :default-openeds="['1', '3']" active-text-color="#20a0ff" text-color="#bfcbd9" background-color="#324157"
+        <el-menu :default-openeds="['1', '3']" default-active="1"  active-text-color="#20a0ff" text-color="#bfcbd9" background-color="#324157"
           router>
           <router-link to="/manage/firstPage"><el-menu-item index="1" route="firstPage" @click="menuChange(1)"><i
                 class="el-icon-message"></i>首页</el-menu-item></router-link>
@@ -128,4 +128,9 @@ export default {
 
 .el-icon-message {
   color: rgb(50, 64, 87);
-}</style>
+}
+.router-link-active {
+  background-color: blue; /* 或者你喜欢的任何颜色 */
+}
+
+</style>
