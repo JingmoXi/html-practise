@@ -12,7 +12,7 @@
             <template slot="title"><i class="el-icon-message"></i>数据管理</template>
             <router-link to="/manage/userList"><el-menu-item index="2-1" ref="userlist"
                 >用户列表</el-menu-item></router-link>
-            <router-link to="/manage/userList"><el-menu-item index="2-2"
+            <router-link to="/manage/sellerPage"><el-menu-item index="2-2"
                 >商家列表</el-menu-item></router-link>
             <router-link to="/manage/userList"><el-menu-item index="2-3"
                 >选项3</el-menu-item></router-link>
