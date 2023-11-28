@@ -19,7 +19,7 @@
           </el-submenu>
           <el-submenu index="3" >
             <template slot="title"><i class="el-icon-message"></i>添加数据</template>
-            <el-menu-item ref="shangpu" index="3-1"  >添加商铺</el-menu-item>
+            <router-link to="/manage/addshop"><el-menu-item ref="shangpu" index="3-1"  >添加商铺</el-menu-item></router-link>
             <el-menu-item index="3-2" >添加商品</el-menu-item>
 
           </el-submenu>

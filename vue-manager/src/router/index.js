@@ -6,6 +6,7 @@ import ManagePage from '@/page/ManagePage.vue'
 import UserList from '@/page/UserList.vue'
 import FirstPage from '@/page/FirstPage.vue'
 import SellerPage from '@/page/SellePage.vue'
+import AddShop from '@/page/AddShoppe.vue'
 
 Vue.use(Router)
 
@@ -36,6 +37,12 @@ export const constantRoutes = [
                 path: '/manage/sellerPage',
                 component: SellerPage,
                 meta: ['首页'],
+            }
+            ,
+            {
+                path: '/manage/addshop',
+                component: AddShop,
+                meta: ['添加商铺'],
             }
         ]
     },
