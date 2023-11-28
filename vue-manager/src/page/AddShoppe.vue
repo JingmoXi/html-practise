@@ -17,7 +17,7 @@
                 <el-input v-model="ruleForm.title"></el-input>
             </el-form-item>
             <el-form-item label="商铺分类" prop="title">
-                <el-cascader v-model="ruleForm.type" :options="options" @change="handleChange"></el-cascader>
+                <el-cascader v-model="ruleForm.type" :options="typeOptions" @change="handleChange"></el-cascader>
             </el-form-item>
 
 
@@ -124,6 +124,9 @@ export default {
         },
         resetForm(formName) {
             this.$refs[formName].resetFields();
+        },
+        handleChange(){
+            
         }
     }
 }

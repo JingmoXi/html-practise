@@ -9,7 +9,7 @@
           <router-link to="/manage/firstPage"><el-menu-item index="1"  ><i
                 class="el-icon-message"></i>首页</el-menu-item></router-link>
           <el-submenu index="2">
-            <template slot="title"><i class="el-icon-message"></i>数据管理</template>
+            <template slot="title"><i class="el-icon-message"></i><span slot="title">数据管理</span></template>
             <router-link to="/manage/userList"><el-menu-item index="2-1" ref="userlist"
                 >用户列表</el-menu-item></router-link>
             <router-link to="/manage/sellerPage"><el-menu-item index="2-2"
@@ -18,7 +18,7 @@
                 >选项3</el-menu-item></router-link>
           </el-submenu>
           <el-submenu index="3" >
-            <template slot="title"><i class="el-icon-message"></i>添加数据</template>
+            <template slot="title"><i class="el-icon-message"></i><span slot="title">添加数据</span></template>
             <router-link to="/manage/addshop"><el-menu-item ref="shangpu" index="3-1"  >添加商铺</el-menu-item></router-link>
             <el-menu-item index="3-2" >添加商品</el-menu-item>
 
@@ -46,14 +46,8 @@
       </el-aside>
 
       <el-container>
-        <el-header>
-          <span>首页</span>
-          <img id="user-icon" src="../assets/logo.png">
-        </el-header>
-        <el-main>
-          <router-view></router-view>
-        </el-main>
 
+        <router-view></router-view>
       </el-container>
     </el-container>
   </div>
@@ -68,8 +62,8 @@ export default {
     return {
       uniqueopened: true,
       colll: '#20a0ff',
-      defaultactive: "2-1",
-      defaultopeneds: ['2']
+      defaultactive: "2-2",
+      defaultopeneds: ['']
     }
   },
   methods: {
@@ -78,14 +72,16 @@ export default {
       console.log("handleSelect")
       console.log(key)
       console.log(keyPath)
-      this.$data.defaultactive="2-2"
+      // this.$data.defaultactive=key
+    
       console.log(this.$data)
       console.log("handleSelect")
     },
     handleOpen(key, keyPath) {
       console.log("handleOpen")
       console.log(key);
-      this.$data.defaultopeneds=keyPath
+      console.log(keyPath);
+      // this.$data.defaultopeneds=keyPath
       
     },
     handleClose(key, keyPath) {
