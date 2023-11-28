@@ -7,6 +7,7 @@ import UserList from '@/page/UserList.vue'
 import FirstPage from '@/page/FirstPage.vue'
 import SellerPage from '@/page/SellePage.vue'
 import AddShop from '@/page/AddShoppe.vue'
+import TextEditor from '@/page/TextEditor.vue'
 
 Vue.use(Router)
 
@@ -43,6 +44,11 @@ export const constantRoutes = [
                 path: '/manage/addshop',
                 component: AddShop,
                 meta: ['添加商铺'],
+            },
+            {
+                path: '/manage/textEditor',
+                component: TextEditor,
+                meta: ['文本编辑'],
             }
         ]
     },

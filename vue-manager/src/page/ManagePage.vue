@@ -29,7 +29,7 @@
           </el-submenu>
           <el-submenu index="5">
             <template slot="title"><i class="el-icon-message"></i>编辑</template>
-            <el-menu-item index="5-1" >文本编辑</el-menu-item>
+            <router-link to="/manage/textEditor"><el-menu-item index="5-1" >文本编辑</el-menu-item></router-link>
           </el-submenu>
 
           <el-submenu index="6">
