@@ -31,7 +31,7 @@ export default {
         return {
             content: '<h2>I am Example</h2>',
             editorOption: {
-                // Some Quill options...
+                // Some Quill options... 
             }
         }
     },
